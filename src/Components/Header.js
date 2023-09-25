@@ -21,8 +21,6 @@ class Header extends React.Component {
   constructor() {
     super();
     this.state = {
-      bgc: "",
-      visblty: "",
       loginModalIsOpen: false,
       createAccountModalIsOpen: false,
       isLoggedIn: false,
@@ -33,20 +31,6 @@ class Header extends React.Component {
       lastName: undefined,
     };
   }
-
-  componentDidMount() {
-    const path = this.props.location.pathname;
-    this.setDisplay(path);
-  }
-
-  setDisplay = (path) => {
-    let bgcl, visb;
-    if (path === "/") {
-      bgcl = "#000000";
-      visb = "hidden";
-      this.setState({ bgc: bgcl, visblty: visb });
-    }
-  };
 
   handleModal = (state, value) => {
     this.setState({ [state]: value });
@@ -145,10 +129,20 @@ class Header extends React.Component {
       createAccountModalIsOpen,
     } = this.state;
     return (
-      <div className="navbar" style={{ backgroundColor: bgc }}>
+      <div
+        className="navbar"
+        style={{
+          backgroundColor:
+            this.props.location.pathname === "/" ? "black" : "red",
+        }}
+      >
         <div
           className="logo"
-          style={{ visibility: visblty, cursor: "pointer" }}
+          style={{
+            visibility:
+              this.props.location.pathname === "/" ? "hidden" : "visible",
+            cursor: "pointer",
+          }}
           onClick={this.handleLogo}
         >
           Zomato!
