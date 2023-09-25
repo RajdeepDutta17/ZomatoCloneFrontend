@@ -44,8 +44,11 @@ class Header extends React.Component {
     if (path === "/") {
       bgcl = "#000000";
       visb = "hidden";
-      this.setState({ bgc: bgcl, visblty: visb });
+    } else {
+      bgcl = "ff0000";
+      visb = "visible";
     }
+    this.setState({ bgc: bgcl, visblty: visb });
   };
 
   handleModal = (state, value) => {
