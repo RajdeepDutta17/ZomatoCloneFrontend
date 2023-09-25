@@ -44,11 +44,8 @@ class Header extends React.Component {
     if (path === "/") {
       bgcl = "#000000";
       visb = "hidden";
-    } else {
-      bgcl = "ff0000";
-      visb = "visible";
+      this.setState({ bgc: bgcl, visblty: visb });
     }
-    this.setState({ bgc: bgcl, visblty: visb });
   };
 
   handleModal = (state, value) => {
@@ -83,7 +80,7 @@ class Header extends React.Component {
     if (userEmail && userPassword) {
       axios({
         method: "POST",
-        url: "https://zomatoclonebackend-k1p2.onrender.com/login",
+        url: "http://localhost:3500/login",
         headers: { "Content-Type": "application/json" },
         data: userDataObj,
       })
@@ -121,7 +118,7 @@ class Header extends React.Component {
     if (firstName && lastName && userEmail && userPassword) {
       axios({
         method: "POST",
-        url: "https://zomatoclonebackend-k1p2.onrender.com/signup",
+        url: "http://localhost:3500/signup",
         headers: { "Content-Type": "application/json" },
         data: userDataObj,
       })
@@ -148,36 +145,36 @@ class Header extends React.Component {
       createAccountModalIsOpen,
     } = this.state;
     return (
-      <div class="navbar" style={{ backgroundColor: bgc }}>
+      <div className="navbar" style={{ backgroundColor: bgc }}>
         <div
-          class="logo"
+          className="logo"
           style={{ visibility: visblty, cursor: "pointer" }}
           onClick={this.handleLogo}
         >
           Zomato!
         </div>
         {!isLoggedIn ? (
-          <div class="button">
+          <div className="button">
             <div
-              class="btn-1"
+              className="btn-1"
               onClick={() => this.handleModal("loginModalIsOpen", true)}
             >
               Login
             </div>
             <div
-              class="btn-2"
+              className="btn-2"
               onClick={() => this.handleModal("createAccountModalIsOpen", true)}
             >
               Create an account
             </div>
           </div>
         ) : (
-          <div class="button">
-            <div class="btn-1" style={{ border: "none" }}>
+          <div className="button">
+            <div className="btn-1" style={{ border: "none" }}>
               {loggedInUser}
             </div>
             <div
-              class="btn-2"
+              className="btn-2"
               onClick={() => this.handleModal("isLoggedIn", false)}
             >
               Logout
@@ -283,7 +280,7 @@ class Header extends React.Component {
             </button>
             <button
               type="button"
-              class="btn btn-danger"
+              className="btn btn-danger"
               onClick={() =>
                 this.handleModal("createAccountModalIsOpen", false)
               }
