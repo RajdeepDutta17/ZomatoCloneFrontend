@@ -44,7 +44,7 @@ class Details extends React.Component {
 
     axios({
       method: "GET",
-      url: `https://zomatoclonebackend-k1p2.onrender.com/${restaurant}`,
+      url: `https://zomatoclonebackend-k1p2.onrender.com/getAllRestaurantsById/${restaurant}`,
       headers: { "Content-Type": "application/json" },
     })
       .then((response) => {
@@ -62,7 +62,7 @@ class Details extends React.Component {
 
       axios({
         method: "GET",
-        url: `https://zomatoclonebackend-k1p2.onrender.com/${restaurant_id}`,
+        url: `https://zomatoclonebackend-k1p2.onrender.com/getAllMenuItemsByResId/${restaurant_id}`,
         headers: { "Content-Type": "application/json" },
       })
         .then((response) => {
@@ -106,14 +106,17 @@ class Details extends React.Component {
       };
       const stripe = await loadStripe(process.env.REACT_APP_KEY);
 
-      const response = await fetch("https://zomatoclonebackend-k1p2.onrender.com/payments", {
-        method: "POST",
-        headers: {
-          Accept: "application/json",
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(paymentObj),
-      });
+      const response = await fetch(
+        "https://zomatoclonebackend-k1p2.onrender.com/payments",
+        {
+          method: "POST",
+          headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(paymentObj),
+        }
+      );
 
       const session = await response.json();
 
