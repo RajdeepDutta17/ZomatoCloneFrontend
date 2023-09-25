@@ -80,7 +80,7 @@ class Header extends React.Component {
     if (userEmail && userPassword) {
       axios({
         method: "POST",
-        url: "http://localhost:3500/login",
+        url: "https://zomatoclonebackend-k1p2.onrender.com/login",
         headers: { "Content-Type": "application/json" },
         data: userDataObj,
       })
@@ -118,7 +118,7 @@ class Header extends React.Component {
     if (firstName && lastName && userEmail && userPassword) {
       axios({
         method: "POST",
-        url: "http://localhost:3500/signup",
+        url: "https://zomatoclonebackend-k1p2.onrender.com/signup",
         headers: { "Content-Type": "application/json" },
         data: userDataObj,
       })
