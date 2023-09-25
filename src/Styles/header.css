@@ -1,0 +1,59 @@
+.navbar {
+  background-color: red;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 15px;
+}
+.button {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  color: white;
+}
+.logo {
+  border: 4px solid white;
+  padding: 5px;
+  border-radius: 8px;
+  color: white;
+  font-weight: 900;
+}
+
+[class^="btn-"] {
+  border: 1px solid white;
+  padding: 5px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.loginHeader {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  font-size: 25px;
+}
+.loginHeader > h2 {
+  font-size: 40px;
+}
+.inputBox {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 17px;
+  margin-left: 5px;
+}
+.buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 10px 0;
+  gap: 10px;
+  font-size: 17px;
+}
+/* .socialMediaBtn {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 17px;
+} */

@@ -1,0 +1,190 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* .topSection__btn {
+  text-align: right;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-right: 5vw;
+  margin-top: 3vh;
+}
+.topSection__btn [class^="btn-"] {
+  border-radius: 10px;
+  padding: 7px;
+  background-color: transparent;
+  border: 2px solid red;
+  color: red;
+  margin-right: 5px;
+}
+.topSection__btn [class^="btn-"]:hover {
+  color: white;
+  background-color: black;
+  border: 2px solid white;
+  cursor: pointer;
+} */
+.topSection__content {
+  min-height: 80vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 10vh;
+  font-size: 3vw;
+}
+.topSection__content .logo {
+  border: 3px solid red;
+  border-radius: 10px;
+  padding: 8px;
+  background-color: black;
+  color: red;
+  font-weight: 500;
+}
+.topSection__content .heading {
+  color: white;
+  font-weight: 700;
+  font-family: "Trebuchet MS";
+  padding: 10px 0;
+}
+.topSection__searchOptions {
+  display: flex;
+  flex-direction: row;
+}
+[class^="content-"] {
+  height: 3vw;
+  width: 25vw;
+  font-size: 1.5rem;
+  border: 2px solid red;
+  border-radius: 12px;
+  opacity: 0.5;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.suggestionBox {
+  color: black;
+  font-size: 20px;
+}
+.suggestionBox li {
+  list-style: none;
+  margin-top: 2%;
+  background-color: white;
+  /* border: 2px solid red; */
+  position: relative;
+  right: 4%;
+  border-radius: 12px;
+  padding: 1%;
+  padding-left: 3%;
+  box-shadow: 2px 5px 20px 2px gray;
+}
+
+.content-dropDown {
+  padding: 3px;
+}
+.content-searchBar {
+  padding-left: 27px;
+}
+
+.topSection > img {
+  height: 82vh;
+  width: 100%;
+}
+
+.searchIcon > img {
+  height: 1.3rem;
+  position: relative;
+  top: 3px;
+  left: 27px;
+}
+
+.bottomSection__heading {
+  padding: 1%;
+  margin-left: 1%;
+  font-size: 2vw;
+}
+
+.heading-1 {
+  font-size: 2vw;
+  font-weight: 600;
+  color: red;
+}
+
+.heading-2 {
+  font-size: 1.3vw;
+  margin-top: 0.5%;
+}
+
+[class^="Container-"] {
+  display: flex;
+  flex-direction: row;
+}
+
+[class^="box-"] {
+  max-height: 25vh;
+  width: 30%;
+  box-shadow: 2px 2px 7px 5px gray;
+  display: flex;
+  flex-direction: row;
+  border-radius: 12px;
+  margin: 10px auto;
+}
+
+[class^="boxImage-"] {
+  max-height: 25vh;
+  width: 50%;
+  border-radius: 12px;
+}
+
+.boxImage-2 {
+  width: 82%;
+  /* padding-right: 1%; */
+}
+
+.boxImage-3 {
+  width: 49%;
+}
+
+.boxImage-4 {
+  width: 70%;
+}
+
+.boxImage-5 {
+  width: 48%;
+}
+
+.boxImage-6 {
+  width: 49%;
+}
+
+.contentContainer {
+  padding-left: 2%;
+  padding-top: 6%;
+}
+
+[class^="boxHeading-"] {
+  font-size: 2vw;
+  font-weight: 400;
+  margin-bottom: 7%;
+}
+
+[class^="boxContent-"] {
+  font-size: 1.2vw;
+  padding-right: 2%;
+}
+
+@media all and (max-width: 768px) {
+  [class^="Container-"] {
+    display: flex;
+    flex-direction: column;
+  }
+  [class^="box-"] {
+    width: 90%;
+  }
+  [class^="boxImage-"] {
+    height: 20vh;
+    width: 50%;
+  }
+}

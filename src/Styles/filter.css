@@ -1,0 +1,157 @@
+.heading {
+  font-family: Poppins;
+  font-size: 36px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.53;
+  letter-spacing: normal;
+  text-align: left;
+  color: #192f60;
+  margin: 20px 0;
+}
+.filterPanel {
+  height: 682px;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+  background-color: white;
+  padding: 15px;
+}
+.resultsPanel {
+  height: 291px;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+  background-color: white;
+  margin-bottom: 30px;
+}
+.filterPanelHeading {
+  font-family: Poppins;
+  font-size: 18px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  text-align: left;
+  color: #192f60;
+}
+.filterPanelSubHeading {
+  font-family: Poppins;
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  text-align: left;
+  color: #192f60;
+  margin: 15px 0;
+}
+.locationSelection {
+  height: 40px;
+  width: 100%;
+  padding: 8px 16.7px 7px 15px;
+  border-radius: 3px;
+  border: 1px solid #192f60;
+}
+.cusineOption {
+  font-family: Poppins;
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  text-align: left;
+  color: #192f60;
+  margin: 10px;
+}
+.upperSection {
+  padding: 20px;
+  padding-bottom: 0;
+}
+.lowerSection {
+  padding: 20px;
+  padding-bottom: 0;
+}
+.resultsImage {
+  height: 120px;
+  width: 120px;
+  border-radius: 20px;
+}
+.resultsHeading {
+  font-family: Poppins;
+  font-size: 30px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.53;
+  letter-spacing: normal;
+  text-align: left;
+  color: #192f60;
+}
+.resultsSubHeading {
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.88;
+  letter-spacing: normal;
+  text-align: left;
+  color: #192f60;
+}
+.resultsAddress {
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.88;
+  letter-spacing: normal;
+  text-align: left;
+  color: #636f88;
+}
+.pagination {
+  display: flex;
+  padding-left: 35%;
+}
+.paginationButton {
+  border: 1px solid black;
+  height: 30px;
+  width: 30px;
+  margin: 0 10px;
+  text-align: center;
+  border-radius: 5px;
+  padding-top: 2px;
+}
+.no-records {
+  color: red;
+  font-weight: bold;
+  font-size: 35px;
+  text-align: center;
+  line-height: 600px;
+  font-family: Poppins;
+}
+.cursor {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1220px) {
+  .resultsHeading,
+  .resultsSubHeading,
+  .resultsAddress {
+    margin-left: 50px;
+  }
+
+  .lowerSection {
+    padding-top: 0;
+  }
+
+  .lowerSection,
+  .resultsAddress {
+    margin-left: 0;
+    width: 100px;
+  }
+  .resultsPanel {
+    margin: 10px;
+  }
+}
