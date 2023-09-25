@@ -106,17 +106,12 @@ class Details extends React.Component {
       };
       const stripe = await loadStripe(process.env.REACT_APP_KEY);
 
-      const response = await fetch(
-        "https://zomatoclonebackend-k1p2.onrender.com/payments",
-        {
-          method: "POST",
-          headers: {
-            Accept: "application/json",
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(paymentObj),
-        }
-      );
+      const response = await axios({
+        method: "POST",
+        url: "https://zomatoclonebackend-k1p2.onrender.com/payments",
+        headers: { "Content-Type": "application/json" },
+        data: paymentObj,
+      });
 
       const session = await response.json();
 
