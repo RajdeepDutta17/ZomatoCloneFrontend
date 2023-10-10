@@ -113,7 +113,9 @@ class Details extends React.Component {
         data: paymentObj,
       });
 
+      console.log(response);
       const session = await response.json();
+      console.log(session);
 
       const result = stripe.redirectToCheckout({
         sessionId: session.id,
