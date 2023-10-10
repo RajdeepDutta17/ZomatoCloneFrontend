@@ -114,7 +114,7 @@ class Details extends React.Component {
       });
 
       console.log(response);
-      const session = await response.json();
+      const session = await response.data.json();
       console.log(session);
 
       const result = stripe.redirectToCheckout({
